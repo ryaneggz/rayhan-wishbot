@@ -16,6 +16,7 @@ api_key_open = os.getenv('OPENAI_API_KEY')
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = '/Users/rayhanmohammad/cursor-ai-project/UPLOAD_FOLDER'
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=True)
 
 # Global variable to store chat history
